@@ -1,4 +1,4 @@
-todo = ["Eat a tree"]
+todo = ["Eat a tree", "Listen to Weezer"]
 status_off = 0
 
 while status_off == 0:
@@ -15,5 +15,9 @@ while status_off == 0:
     else:
         if user_choice == 1:
             print(todo)
-        else:
-            print("Woo cowboy")
+        elif user_choice == 2:
+            delete_item = int(input("What Item would you like to delete: "))
+            todo.pop(delete_item)
+        elif user_choice == 3:
+            add_item = str(input("What would you like to add to your list: "))
+            todo.append(add_item)
