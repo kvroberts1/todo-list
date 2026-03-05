@@ -2,11 +2,11 @@ todo = ["Eat a tree", "Listen to Weezer"]
 status_off = 0
 
 def print_todo():
-    n=1
+    n = 1
     print("")
     for i in range(len(todo)):
         print(n, todo[i])
-        n=n+1
+        n = n + 1
 
 
 while status_off == 0:
