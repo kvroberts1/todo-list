@@ -19,7 +19,7 @@ while status_off == 0:
         status_off = 1
     else:
         if user_choice == 1:
-            print(print_todo())
+            print_todo()
         elif user_choice == 2:
             delete_item = int(input("What Item would you like to delete: "))
             todo.pop(delete_item)
