@@ -30,7 +30,7 @@ while status_off == 0:
                     todo.pop(delete_item)
                     print_todo()
                 except IndexError:
-                    print("Oops your list is empty or you are trying to delete and item that doesn't exsist.")
+                    print("Oops your list is empty or you are trying to delete and item that doesn't exist.")
             elif user_choice == 3:
                 add_item = input("What would you like to add to your list: ")
                 todo.append(add_item)
