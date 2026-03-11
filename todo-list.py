@@ -1,6 +1,8 @@
 todo = ["Eat a tree", "Listen to Weezer"]
 status_off = 0
 
+power = open("list.txt")
+
 def print_todo():
     n = 1
     print("")
