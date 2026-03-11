@@ -1,7 +1,9 @@
 todo = ["Eat a tree", "Listen to Weezer"]
 status_off = 0
 
-power = open("list.txt")
+file = open("list.txt", "r")
+with open("list.txt", "r") as file:
+    todo = file.readlines()
 
 def print_todo():
     n = 1
@@ -9,7 +11,6 @@ def print_todo():
     for i in range(len(todo)):
         print(n, todo[i])
         n = n + 1
-
 
 while status_off == 0:
     print("")
@@ -23,6 +24,7 @@ while status_off == 0:
         user_choice = int(input("Select a Choice: "))
         if user_choice == 4:
             status_off = 1
+            power.close()
         else:
             if user_choice == 1:
                 print_todo()
