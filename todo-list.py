@@ -1,9 +1,8 @@
-todo = ["Eat a tree", "Listen to Weezer"]
 status_off = 0
 
-file = open("list.txt", "r")
 with open("list.txt", "r") as file:
     todo = file.readlines()
+    todo = [item.strip('\n') for item in todo]
 
 def print_todo():
     n = 1
@@ -25,9 +24,8 @@ while status_off == 0:
         if user_choice == 4:
             with open("list.txt", "w+") as file:
                 for items in todo:
-                    file.write('%s\n' %todo)
+                    file.write('%s\n' %items)
             status_off = 1
-            file.close()
         else:
             if user_choice == 1:
                 print_todo()
