@@ -23,8 +23,11 @@ while status_off == 0:
     try:
         user_choice = int(input("Select a Choice: "))
         if user_choice == 4:
+            with open("list.txt", "w+") as file:
+                for items in todo:
+                    file.write('%s\n' %todo)
             status_off = 1
-            power.close()
+            file.close()
         else:
             if user_choice == 1:
                 print_todo()
